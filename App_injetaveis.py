@@ -101,6 +101,7 @@ def main():
         st.markdown("### LINKS ÚTEIS") 
         st.markdown("[📚 UpToDate](https://uptodate.ebserh.gov.br/)")
         st.markdown("[🔗 Bula ANVISA](https://consultas.anvisa.gov.br/#/bulario/)")
+        st.markdown("[🔗 Solicitar ajustes/ Feedback](https://docs.google.com/forms/d/e/1FAIpQLSeO7N5Iyuf-rjnXbTtKHl95aE-rXVv-5ao-kFzTXbEYN5FdzQ/viewform?pli=1/)")
         st.divider()
         if st.button("Sair / Logout", use_container_width=True):
             st.session_state['auth'] = False
