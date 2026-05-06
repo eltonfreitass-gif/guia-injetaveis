@@ -8,7 +8,7 @@ from functools import lru_cache
 import numpy as np
 
 # --- CONFIGURAÇÕES DA PÁGINA ---
-st.set_page_config(page_title="HUUFMA - Guia Injetáveis v7.5", layout="wide", page_icon="💉")
+st.set_page_config(page_title="HUUFMA- Guia de Medicamentos Injetáveis v7.5", layout="wide", page_icon="💉")
 
 # --- ESTILIZAÇÃO CSS (DESIGN INSTITUCIONAL + CUSTOMIZAÇÃO DO BOTÃO LATERAL) ---
 st.markdown("""
@@ -194,7 +194,7 @@ def main():
 
     st.markdown("""
         <div class="footer">
-            <b>Guia de Estabilidade de Injetáveis - HUUFMA</b><br>
+            <b>Guia de Medicamentos de Injetáveis - HUUFMA</b><br>
             Desenvolvimento: Elton Jonh Freitas Santos (elton.santos@huufma.br) | Colaboradores: Vinicius Brito Pereira | Carolayne Silva Amorim
         </div>
     """, unsafe_allow_html=True)
