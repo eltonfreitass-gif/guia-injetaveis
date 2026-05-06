@@ -111,7 +111,7 @@ def main():
 
     med_list = sorted(df["MEDICAMENTO"].unique())
     col_s, col_c = st.columns([4, 1])
-    with col_s: escolha = st.selectbox("💉 Pesquisar:", [""] + med_list, key=f"s_{st.session_state['search_key']}")
+    with col_s: escolha = st.selectbox("💉 Pesquise o medicamento:", [""] + med_list, key=f"s_{st.session_state['search_key']}")
     with col_c:
         st.markdown("<br>", unsafe_allow_html=True)
         if st.button("Limpar Busca"): st.session_state['search_key'] += 1; st.rerun()
