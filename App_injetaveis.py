@@ -85,7 +85,7 @@ def main():
         _, col_log, _ = st.columns([1, 1.5, 1])
         with col_log:
             if os.path.exists("Logo_huufma.jpg"): st.image("Logo_huufma.jpg", use_container_width=True)
-            st.title("Guia de Injetáveis")
+            st.title("Guia de Medicamentos Injetáveis")
             u, p = st.text_input("Usuário"), st.text_input("Senha", type="password")
             if st.button("Acessar", use_container_width=True):
                 if u in USUARIOS and USUARIOS[u] == p:
