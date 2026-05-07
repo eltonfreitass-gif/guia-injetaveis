@@ -38,9 +38,6 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- FUNÇÕES DE DADOS ---
-USUARIOS = {"admin": "123", "farmacia": "hu"}
-
 @st.cache_data(ttl=3600)
 def carregar_dados():
     try:
@@ -84,9 +81,12 @@ def main():
                 u = st.text_input("Usuário", key="user_login")
                 p = st.text_input("Senha", type="password", key="pass_login")
                 if st.button("Acessar", use_container_width=True):
-                    if u in USUARIOS and USUARIOS[u] == p:
-                        st.session_state['auth'], st.session_state['perf'] = True, u
-                        st.rerun()
+                    # NOVA LÓGICA DE VERIFICAÇÃO SEGURA:
+                    try:
+                        # Busca o usuário dentro da seção 'usuarios' do segredo
+                        if u in st.secrets["usuarios"] and st.secrets["usuarios"][u] == p:
+                            st.session_state['auth'], st.session_state['perf'] = True, u
+                            st.rerun()
                     else: st.error("Dados incorretos")
         else:
             st.success(f"Logado como: {st.session_state['perf'].upper()}")
