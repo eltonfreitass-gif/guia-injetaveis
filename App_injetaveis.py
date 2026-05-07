@@ -82,8 +82,7 @@ def main():
                 p = st.text_input("Senha", type="password", key="pass_login")
                 if st.button("Acessar", use_container_width=True):
                     # NOVA LÓGICA DE VERIFICAÇÃO SEGURA:
-                    try:
-                        # Busca o usuário dentro da seção 'usuarios' do segredo
+                    try:                   
                         if u in st.secrets["usuarios"] and st.secrets["usuarios"][u] == p:
                             st.session_state['auth'], st.session_state['perf'] = True, u
                             st.rerun()
