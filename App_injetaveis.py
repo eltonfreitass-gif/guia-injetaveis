@@ -201,6 +201,7 @@ def main():
 
                     st.markdown('<div class="secao-titulo">⏳ ADMINISTRAÇÃO E ESTABILIDADE</div>', unsafe_allow_html=True)
                     c_estab = [
+                        ("Incompatibilidades (Base stabilis.org)", "Incompatibilidades"), 
                         ("Tempo de Infusão", "TEMPO DE INFUSÃO"), 
                         ("Reconstituído: Ambiente (25°C)", "ESTABILIDADE DO RECONSTITUÍDO (Temp. Ambiente (25°C)"), 
                         ("Reconstituído: Geladeira (2-8°C)", "ESTABILIDADE DO RECONSTITUÍDO Refrigerada (2º a 8ºC)"), 
