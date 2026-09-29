@@ -1,6 +1,7 @@
-streamlit
-pandas
-openpyxl
-requests
-deep-translator
-numpy
+streamlit==1.64.0
+pandas==2.2.3
+openpyxl==3.1.5
+requests==2.34.2
+deep-translator==1.11.4
+filelock==4.0.3
+gspread==6.2.1
